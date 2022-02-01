@@ -1,0 +1,386 @@
+/*Reseteo del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Barra negra para el menu fijo*/
+
+#fujiLogo img {
+    width: 30%;
+    filter: brightness(0) invert(1);
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    height: 95px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+/*Elementos del menu*/
+
+.nav__items {
+    padding: 10px;
+    align-content: center;
+}
+
+/*Fin de edicion menu*/
+
+/*Home - Seccion Historia*/
+#section__historia img {
+    width: 100%;
+
+    margin-bottom: 60px;
+}
+
+#section__historia {
+    position: relative;
+    text-align: center;
+
+}
+
+/*Texto destacado de Home - seccion Historia*/
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 5em;
+    text-align: center;
+    z-index: 1;
+    width: 70%;
+}
+
+/*Fin de Home - seccion Historia*/
+
+/*Alineando Home - seccion bicicletas*/
+#section__bicicletas {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+.section__bicicletas img {
+    width: 100%;
+}
+
+.section__bicicletas {
+
+    position: relative;
+    text-align: center;
+}
+
+
+
+.section__bicicletas a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkgrey;
+    border-radius: 16px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 15px 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+
+
+}
+
+.section__bicicletas a:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+/*Fin de Home - seccion Bicicletas*/
+
+
+
+/*footer*/
+
+footer {
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.rrss {
+    width: 32px;
+    height: 32px;
+    display: inline;
+
+}
+
+.rrss img {
+    width: 32px;
+    height: 32px;
+}
+
+.footer__fujiLogo img {
+    width: 30%;
+    filter: brightness(0) invert(1);
+}
+
+/*Fin footer*/
+
+/*Pagina Contacto*/
+
+.main__form-Contacto {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
+
+}
+
+/*Ajuste del ancho del form*/
+.form__fieldset {
+    width: 60%;
+    border: 0px;
+}
+
+/*para que el input sea del 100% de la caja*/
+input {
+    width: 100%;
+}
+
+legend {
+    font-size: 2em;
+    padding-bottom: 30px;
+}
+
+input[type=text],
+input[type=email] {
+    margin: 10px;
+    padding-bottom: 15px;
+    color: black;
+}
+
+input[name=message] {
+    padding-bottom: 50px;
+}
+
+
+/*Botonera form*/
+.form__botones--padre {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
+
+}
+
+.form__botones {
+    width: 30%;
+}
+
+.form__botones,
+legend,
+label {
+    color: black;
+
+}
+
+input[type=submit],
+input[type=reset] {
+    cursor: pointer;
+}
+
+/*Seccion Bicicletas - Nevada*/
+/*Portada Seccion Bicicletas -- Nevada*/
+.portada__nevada--img {
+    width: 100%;
+    padding-top: 95px;
+    margin-bottom: 60px;
+}
+
+#sectionNevada__principal {
+    position: relative;
+    text-align: center;
+}
+
+
+#sectionNevada__principal p {
+    color: whitesmoke;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 70%;
+}
+
+.portada__nevada--titulo {
+    font-size: 2em;
+}
+
+.portada__nevada--cuerpo {
+    padding-top: 160px;
+    font-size: 1.2em;
+}
+
+/* FIN Portada Seccion Bicicletas -- Nevada*/
+
+/*Grid para el Main (portada + items del cuerpo)*/
+
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "portada portada portada"
+        "bicicleta__brickred bicicleta__cyan bicicleta__satin";
+    grid-template-columns: auto auto auto;
+}
+
+section#sectionNevada__principal {
+    grid-area: portada;
+}
+
+section#nevada__brickred {
+    grid-area: bicicleta__brickred;
+}
+
+section#nevada__cyan {
+    grid-area: bicicleta__cyan;
+}
+
+section#nevada__satin {
+    grid-area: bicicleta__satin;
+}
+
+.bicicleta__nevada {
+    justify-self: center;
+    margin-bottom: 150px;
+    margin-top: 30px;
+}
+
+/*Seccion Donde Comprar*/
+main {
+    padding-top: 95px;
+}
+
+.mapa__botones {
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 15px;
+
+}
+
+.mapa__botones div {
+    background-color: rgb(222, 211, 182);
+    border-radius: 16px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 15px 100px;
+    cursor: pointer;
+
+}
+
+.mapa__botones--provincias:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.mapa__botones--provincias,
+.contacto {
+    text-transform: uppercase;
+}
+
+.mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapa__caba,
+.mapa__buenosAires,
+.mapa__cordoba {
+    display: flex;
+    flex-direction: row;
+}
+
+.mapa__textos {
+    display: flex;
+    flex-direction: column;
+}
+
+.mapa p,
+.contacto {
+    color: black;
+}
+
+
+/*Media queries*/
+@media only screen and (max-width:768px) {
+    nav {
+        width: 100%;
+
+    }
+
+    .menu__items {
+        display: none;
+    }
+
+    #section__historia img {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    #section__bicicletas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section__bicicletas img {
+        padding-bottom: 15px;
+    }
+
+    footer p,
+    form {
+        display: none;
+    }
+}

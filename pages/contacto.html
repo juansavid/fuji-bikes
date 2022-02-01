@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Referencia CSS al proyecto-->
+    <link rel="stylesheet" href="../style/style.css">
+    <!--Typo-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&family=The+Nautigal&display=swap"
+        rel="stylesheet">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <li id="fujiLogo">
+                <img src="../images/fuji_logo.png" alt="fuji_logo"></li>
+            <ul>
+
+                <li class="nav__items">
+                    <a href="../index.html">Home</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./pages/donde_comprar.html">Donde Comprar</a></li>
+                <li class="nav__items">
+                    <a href="./pages/historia.html">Historia</a>
+                </li>
+                <li class="nav__items">
+                    <a href="./pages/Contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Form de contacto con todos los campos obligatorios-->
+        <form class="main__form-Contacto">
+            <fieldset class="form__fieldset">
+                <legend>Mandanos tu consulta</legend>
+                <div>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" placeholder="Nombre y Apellido" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <label for="subject">Asunto</label>
+                    <input type="text" name="subject" placeholder="Asunto" required>
+                </div>
+                <div class="form__message">
+                    <label for="message">Mensaje</label>
+                    <input type="text" name="message" placeholder="Deja tu mensaje aquí..." required>
+                </div>
+                <div class="form__botones--padre">
+                    <input type="submit" value="enviar" class="form__botones submit">
+                    <input type="reset" class="form__botones reset">
+                </div>
+
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <!--RRSS Footer-->
+        <p>Seguinos en @FujiBikesAr</p>
+        <ul>
+            <li class="rrss">
+                <a href="https://www.facebook.com/fujibikesar">
+                    <img src="../images/facebook.png" alt="facebook">
+                </a>
+            </li>
+            <li class="rrss">
+                <a href="https://www.instagram.com/fujibikesar/">
+                    <img src="../images/instagram.png" alt="instagram">
+                </a>
+            </li>
+            <li class="rrss">
+                <a href="https://www.youtube.com/channel/UCZvG3epI1XFAD7zqVtMU66w">
+                    <img src="../images/youtube.png" alt="youtube">
+                </a>
+            </li>
+        </ul>
+        <li class="footer__fujiLogo">
+            <img src="../images/fuji_logo.png" alt="fuji_logo">
+        </li>
+        <form>
+            <fieldset>
+                <legend>Suscribite a nuestro Newsletter</legend>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+            </fieldset>
+        </form>
+        <p class="footer__legales">Fuji Bikes Argentina 2022. Todos los derechos reservados</p>
+        </form>
+
+
+
+
+</body>
+
+</html>
