@@ -17,6 +17,11 @@ body {
     flex-direction: column;
 }
 
+/*Ocultar menu Bootstrap*/
+.btn-group {
+    display: none;
+}
+
 
 /*Barra negra para el menu fijo*/
 
@@ -38,7 +43,7 @@ nav {
 }
 
 
-nav ul {
+#bootstrap-overrides nav ul {
     display: flex;
     flex-flow: row nowrap;
     text-transform: uppercase;
@@ -46,25 +51,30 @@ nav ul {
 }
 
 /*Elementos del menu*/
+#bootstrap-overrides nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
 
-.nav__items {
-    padding: 10px;
-    align-content: center;
+.menu__items {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
 }
 
 /*Fin de edicion menu*/
 
 /*Home - Seccion Historia*/
-#section__historia img {
+.carousel {
     width: 100%;
-
     margin-bottom: 60px;
 }
 
-#section__historia {
-    position: relative;
-    text-align: center;
-
+.carousel-item {
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
 }
 
 /*Texto destacado de Home - seccion Historia*/
@@ -78,6 +88,7 @@ h2 {
     text-align: center;
     z-index: 1;
     width: 70%;
+    text-shadow: rgb(0 0 0 / 50%) 0px 4px 5px;
 }
 
 /*Fin de Home - seccion Historia*/
@@ -353,21 +364,43 @@ main {
 
 /*Media queries*/
 @media only screen and (max-width:768px) {
-    nav {
-        width: 100%;
 
-    }
-
-    .menu__items {
+    /*No mostrar el mismo menu en dsk*/
+    .menu__items li {
         display: none;
+
     }
 
-    #section__historia img {
-        margin-bottom: 15px;
+    .menu__mobile {
+        display: block;
+
     }
+
+    .carousel-item img {
+        visibility: hidden;
+    }
+
+    .carousel-one {
+        background-image: url("../images/fuji_history.jpg");
+    }
+
+    .carousel-two {
+        background-image: url("../images/fuji_history_1.jpg");
+    }
+
+    .carousel-three {
+        background-image: url("../images/fuji_history_2.jpg");
+    }
+
+    .carousel-item {
+        background-size: cover;
+        background-position: center;
+        max-height: 300px;
+    }
+
 
     h2 {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     #section__bicicletas {
