@@ -1,0 +1,249 @@
+/*Reseteo del navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+
+}
+
+#bootstrap-overrides a {
+    color: whitesmoke;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+}
+
+/*Condiciones basicas Desktop*/
+.menu__mobile {
+    display: none;
+}
+
+/*tamaño cuerpo del sitio*/
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Barra negra para el menu fijo*/
+
+#fujiLogo img {
+    width: 30%;
+    filter: brightness(0) invert(1);
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+    height: 95px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item a {
+    text-transform: uppercase;
+
+}
+
+/*Home - Seccion Historia*/
+.carousel {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+}
+
+/*Texto destacado de Home - seccion Historia*/
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 5em;
+    text-align: center;
+    z-index: 1;
+    width: 70%;
+    text-shadow: rgb(0 0 0 / 50%) 0px 4px 5px;
+}
+
+/*Section bicicletas*/
+.section__bicicletas img {
+    width: 100%;
+
+}
+
+/*Botones section bicicletas*/
+.section__bicicletas {
+    position: relative;
+    text-align: center;
+}
+
+
+
+.section__bicicletas a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: darkgrey;
+    border-radius: 16px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 4px 15px 100px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.section__bicicletas a:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+
+/*Pagina bicicletas - Nevada*/
+
+.portada__nevada--img {
+    width: 100%;
+    padding-top: 95px;
+    margin-bottom: 60px;
+
+}
+
+#sectionNevada__principal {
+    position: relative;
+    text-align: center;
+}
+
+
+#sectionNevada__principal p {
+    color: whitesmoke;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 70%;
+}
+
+.portada__nevada--titulo {
+    font-size: 2em;
+}
+
+.portada__nevada--cuerpo {
+    padding-top: 160px;
+    font-size: 1.2em;
+}
+
+
+
+/*Media queries*/
+@media only screen and (max-width:768px) {
+
+    /*No mostrar el mismo menu en dsk*/
+    .nav {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .menu__mobile {
+        display: block;
+        z-index: 4;
+        right: 10px;
+
+
+    }
+
+    .dropdown-toggle {
+        display: flex;
+
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+
+    .oi-menu {
+        font-size: 30px;
+    }
+
+    #bootstrap-overrides .dropdown-menu a,
+    ul {
+        color: black;
+    }
+
+    /*Home Carousel*/
+    .carousel-item img {
+        visibility: hidden;
+    }
+
+    .carousel-one {
+        background-image: url("../images/fuji_history.jpg");
+    }
+
+    .carousel-two {
+        background-image: url("../images/fuji_history_1.jpg");
+    }
+
+    .carousel-three {
+        background-image: url("../images/fuji_history_2.jpg");
+    }
+
+    .carousel-item {
+        background-size: cover;
+        background-position: center;
+        max-height: 300px;
+    }
+
+
+    h2 {
+        font-size: 20px;
+    }
+
+    /*Home Bicicletas*/
+    .section__bicicletas img {
+        padding-bottom: 30px;
+
+    }
+
+
+    /* Bicicletas Nevada*/
+    .portada__nevada--cuerpo {
+        display: none;
+    }
+
+    .portada__nevada--titulo {
+        padding-top: 30px;
+    }
+
+    .col__productos {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+
+}

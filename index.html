@@ -19,7 +19,7 @@
 
 
     <!--Referencia CSS al proyecto-->
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/boot-style.css">
 
     <!--Typo-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,63 +31,49 @@
 
 <body id="bootstrap-overrides">
     <header>
-        <!--Menu Navegable - Sin Bootstrap-->
+        <!--Menu Navegable - Desktop-->
         <nav>
             <li id="fujiLogo">
                 <img src="./images/fuji_logo.png" alt="fuji_logo">
             </li>
-
-            <ul class="menu__items">
-
-                <li class="nav__items">
-                    <a href="./pages/bicicletas.html">
-                        Bicicletas
-                    </a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#bicicletas">bicicletas</a>
                 </li>
-                <li class="nav__items">
-                    <a href="./pages/donde_comprar.html">
-                        Donde Comprar
-
-                    </a></li>
-                <li class="nav__items">
-                    <a href="./pages/Contacto.html">
-                        Contacto
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">donde comprar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contacto</a>
                 </li>
             </ul>
+
+            <!--Menu Navegable - mobile-->
+
+            <div class="btn-group menu__mobile">
+                <button type="button" class="btn btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="oi oi-menu">
+
+                    </span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#bicicletas">
+                            Bicicletas
+                        </a>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Donde comprar
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <!--Menu Navegable - CON Bootstrap-->
-
-        <div class="btn-group menu__mobile">
-            <button type="button" class="btn btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <span class="oi oi-menu">
-
-                </span>
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="#">
-                        Bicicletas
-                    </a>
-                    <ul> ACA PONER EL SUBMENU
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        Donde comprar
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        Contacto
-                    </a>
-                </li>
-            </ul>
-        </div>
-
     </header>
 
     <main>
@@ -117,16 +103,35 @@
             </h2>
         </div>
 
-        <!--Bloque History
-        <section id="section__historia"></section>
-           <img src="./images/fuji_history.jpg" alt="fuji_history">
-            
--->
+
         </section>
         <!--Bloque Bicicletas-->
 
-        <section id="section__bicicletas">
+        <section id="bicicletas">
+            <div class="container" id="section__bicicletas">
+                <div class="row">
+                    <div class="col-xs col-md-4 section__bicicletas">
+                        <img src="./images/fuji_nevada.jpg" alt="fuji_nevada">
 
+                        <a href="./pages/nevada.html">
+                            descubrila
+                        </a>
+                    </div>
+                    <div class="col-xs col-md-4 section__bicicletas">
+
+                        <img src="./images/fuji_slm.jpg" alt="fuji_slm">
+
+                        <a href="./pages/bicicletas.html#slm">descubrila</a>
+                    </div>
+                    <div class="col-xs col-md-4 section__bicicletas">
+
+                        <img src="./images/fuji_transonic.jpg" alt="fuji_transonic">
+
+                        <a href="./pages/bicicletas.html#transonic">descubrila</a>
+                    </div>
+                </div>
+            </div>
+            <!--
             <div id="section__bicicletas--nevada" class="section__bicicletas">
 
                 <img src="./images/fuji_nevada.jpg" alt="fuji_nevada">
@@ -147,12 +152,13 @@
 
                 <a href="./pages/bicicletas.html#transonic">descubrila</a>
             </div>
+            -->
         </section>
 
     </main>
 
     <footer>
-        <!--RRSS Footer-->
+        <!--RRSS Footer
         <p>Seguinos en @FujiBikesAr</p>
         <ul>
             <li class="rrss">
@@ -186,6 +192,7 @@
         <p class="footer__legales">Fuji Bikes Argentina 2022. Todos los derechos reservados</p>
 
     </footer>
+-->
 
 
 </body>
