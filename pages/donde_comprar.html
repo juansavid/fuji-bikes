@@ -5,159 +5,231 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!--Iconos Bootstrap-->
+    <link href="../open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <!--Referencia CSS al proyecto-->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../css/main.css">
     <!--Typo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&family=The+Nautigal&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700;800;900&display=swap" rel="stylesheet">
     <title>Donde Comprar</title>
 </head>
 
-<body>
+<body id="bootstrap-overrides">
     <header>
         <nav>
-            <li id="fujiLogo">
-                <img src="../images/fuji_logo.png" alt="fuji_logo">
+            <li id="fujiLogo"> <a href="../index.html">
+                    <img src="../images/fuji_logo.png" alt="fuji_logo">
+                </a>
             </li>
-            <ul>
-
-                <li class="nav__items">
-                    <a href="../index.html">Home</a>
+            <!--Menu Navegable - Desktop-->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html#bicicletas">
+                        bicicletas
+                    </a>
                 </li>
-                <li class="nav__items">
-                    <a href="./pages/donde_comprar.html">Donde Comprar</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./donde_comprar.html">
+                        Donde Comprar
+                    </a>
                 </li>
-
-                <li class="nav__items">
-                    <a href="./pages/Contacto.html">Contacto</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/contacto.html">
+                        contacto
+                    </a>
                 </li>
             </ul>
+            <!--Menu Navegable - mobile-->
+            <div class="btn-group menu__mobile">
+                <button type="button" class="btn btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="oi oi-menu">
+                    </span>
+                </button>
+                <ul class="dropdown-menu" id="dropdown-menu__overrides">
+                    <li>
+                        <a class="dropdown-item" href="../index.html#bicicletas">
+                            Bicicletas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./donde_comprar.html">
+                            Donde Comprar
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="../pages/contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-
     <main>
+        <div class="mapa__botones-titulo">
+            <p>
+                Buscá el local en tu provincia
+            </p>
+        </div>
         <div class="mapa__botones">
             <div class="mapa__botones--provincias">
                 <a href="#mapa__caba">caba</a>
             </div>
-
             <div class="mapa__botones--provincias">
                 <a href="#mapa__buenosAires">buenos aires</a>
             </div>
-
             <div class="mapa__botones--provincias">
                 <a href="#mapa__cordoba">cordoba</a>
             </div>
-
         </div>
-
         <div class="mapa">
-            <div class="mapa__caba" id="mapa__caba">
+            <div class="mapa__caba">
+                <span id="mapa__caba"></span>
                 <div class="mapa__textos">
                     <p class="mapa__titulo">
                         Canaglia Bicicletas
                     </p>
-
                     <p class="mapa__direccion">
                         Av. Rivadavia 10700, CABA
                     </p>
-
-                    <div class="contacto">contacto</div>
-
+                    <div class="contacto">Contacto</div>
                     <p class="mapa__contacto">
                         (011)4644-3431
+                    </p>
+                    <p>
                         info@canaglia.com
+                    </p>
+                    <p>
                         www.canaglia.com
                     </p>
                 </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.606270286446!2d-58.516215284235884!3d-34.63938886689441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc84bdfe957d9%3A0xc0eacf02a89fd8d3!2sCanaglia%20Bicicletas!5e0!3m2!1sen!2sar!4v1643584800022!5m2!1sen!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="canaglia">
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen loading="lazy"
+                    class="canaglia googlemap__desktop">
+                </iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.606270286446!2d-58.516215284235884!3d-34.63938886689441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc84bdfe957d9%3A0xc0eacf02a89fd8d3!2sCanaglia%20Bicicletas!5e0!3m2!1sen!2sar!4v1643584800022!5m2!1sen!2sar"
+                    width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen loading="lazy"
+                    class="canaglia googlemap__mobile">
                 </iframe>
             </div>
-            <div class="mapa__buenosAires" id="mapa__buenosAires">
-                <p class="mapa__titulo">
-                    Asensos Bicycles
-                </p>
-                <p class="mapa__direccion">
-                    Moreno 3517, Saladillo, Prov. de Bs. As.
-                </p>
-                <p class="mapa__contacto">
-                    <div class="contacto">contacto</div>
-                    02344-434248 / 02344-15402189
-                    davidasensos@yahoo.com.ar
-                    www.asensos.com.ar
-                </p>
+            <div class="mapa__buenosAires">
+                <span id="mapa__buenosAires"></span>
+                <div class="mapa__textos">
+                    <p class="mapa__titulo">
+                        Asensos Bicycles
+                    </p>
+                    <p class="mapa__direccion">
+                        Moreno 3517, Saladillo, Prov. de Bs. As.
+                    </p>
+                    <div class="contacto">
+                        Contacto
+                    </div>
+                    <p class="mapa__contacto">
+                        02344-434248 / 02344-15402189
+                    </p>
+                    <p class="mapa__contacto">
+                        davidasensos@yahoo.com.ar
+                    </p>
+                    <p class="mapa__contacto">
+                        www.asensos.com.ar
+                    </p>
+                </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.6538204241024!2d-59.784535984211274!3d-35.63625982036624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bde1eaa4306283%3A0x4e8f547b783d1f5!2sAsensos%20Bicycles%20-%20Oficial%20Merida%20Bikes%20Y%20Sram!5e0!3m2!1sen!2sar!4v1643585171843!5m2!1sen!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="asensos">
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="asensos googlemap__desktop">
+                </iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.6538204241024!2d-59.784535984211274!3d-35.63625982036624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bde1eaa4306283%3A0x4e8f547b783d1f5!2sAsensos%20Bicycles%20-%20Oficial%20Merida%20Bikes%20Y%20Sram!5e0!3m2!1sen!2sar!4v1643585171843!5m2!1sen!2sar"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="asensos googlemap__mobile">
                 </iframe>
             </div>
-            <div class="mapa__cordoba" id="mapa__cordoba">
-                <p class="mapa__titulo">
-                    Bora Bikes Carlos Paz
-                </p>
-                <p class="mapa__direccion">
-                    Av. San Martin 1600 - Local 1, Carlos Paz,
-                    Prov. de Córdoba
-                </p>
-                <p class="mapa__contacto">
-                    <div class="contacto">contacto</div>
-                    (3541)372-222
-                    infovcp@borabikes.com.ar
-                    www.borabikes.com.ar
-                </p>
+            <div class="mapa__cordoba">
+                <span id="mapa__cordoba"></span>
+                <div class="mapa__textos">
+                    <p class="mapa__titulo">
+                        Bora Bikes Carlos Paz
+                    </p>
+                    <p class="mapa__direccion">
+                        Av. San Martin 1600 - Local 1, Carlos Paz,
+                        Prov. de Córdoba
+                    </p>
+                    <div class="contacto">
+                        Contacto
+                    </div>
+                    <p class="mapa__contacto">
+                        (3541)372-222
+                    </p>
+                    <p class="mapa__contacto">
+                        infovcp@borabikes.com.ar
+                    </p>
+                    <p class="mapa__contacto">
+                        www.borabikes.com.ar
+                    </p>
+                </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.182551970069!2d-64.48154488431287!3d-31.40909610304328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d67a010cb5957%3A0xcd2bcc83e4dfae55!2sBora%20Bikes%20-%20Villa%20Carlos%20Paz!5e0!3m2!1sen!2sar!4v1643585353669!5m2!1sen!2sar"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="bora">
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="bora googlemap__desktop">
+                </iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.182551970069!2d-64.48154488431287!3d-31.40909610304328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x942d67a010cb5957%3A0xcd2bcc83e4dfae55!2sBora%20Bikes%20-%20Villa%20Carlos%20Paz!5e0!3m2!1sen!2sar!4v1643585353669!5m2!1sen!2sar"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="bora googlemap__mobile">
                 </iframe>
             </div>
-
         </div>
 
-
     </main>
-
     <footer>
         <!--RRSS Footer-->
-        <p>Seguinos en @FujiBikesAr</p>
-        <ul>
-            <li class=" rrss">
-                <a href="https://www.facebook.com/fujibikesar">
-                    <img src="../images/facebook.png" alt="facebook">
-                </a>
-            </li>
-            <li class="rrss">
-                <a href="https://www.instagram.com/fujibikesar/">
-                    <img src="../images/instagram.png" alt="instagram">
-                </a>
-            </li>
-            <li class="rrss">
-                <a href="https://www.youtube.com/channel/UCZvG3epI1XFAD7zqVtMU66w">
-                    <img src="../images/youtube.png" alt="youtube">
-                </a>
-            </li>
-        </ul>
-        <li class="footer__fujiLogo">
-            <img src="../images/fuji_logo.png" alt="fuji_logo">
-        </li>
-        <form>
-            <fieldset>
-                <legend>Suscribite a nuestro Newsletter</legend>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-            </fieldset>
-        </form>
-        <p class="footer__legales">
-            Fuji Bikes Argentina 2022. Todos los derechos reservados
-        </p>
-
+        <div class="contenedor__rrssForm">
+            <div class="contenedor__rrss">
+                <p>Seguinos en @FujiBikesAr</p>
+                <ul>
+                    <li class="rrss">
+                        <a href="https://www.facebook.com/fujibikesar">
+                            <img src="../images/facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="rrss">
+                        <a href="https://www.instagram.com/fujibikesar/">
+                            <img src="../images/instagram.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="rrss">
+                        <a href="https://www.youtube.com/channel/UCZvG3epI1XFAD7zqVtMU66w">
+                            <img src="../images/youtube.png" alt="youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="home__form">
+                <fieldset>
+                    <legend>Suscribite a nuestro Newsletter</legend>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer__legales">
+            <p>Fuji Bikes Argentina 2022. Todos los derechos reservados. Desarrollado por JuanSa</p>
+        </div>
     </footer>
-
-
 </body>
 
 </html>

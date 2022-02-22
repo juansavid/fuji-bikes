@@ -26,47 +26,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700;800;900&display=swap" rel="stylesheet">
     <title>Home</title>
-
 </head>
 
 <body id="bootstrap-overrides">
     <header>
-        <!--Menu Navegable - Desktop-->
         <nav>
-            <li id="fujiLogo">
-                <img src="./images/fuji_logo.png" alt="fuji_logo">
+            <li id="fujiLogo"> <a href="./index.html">
+                    <img src="./images/fuji_logo.png" alt="fuji_logo">
+                </a>
             </li>
+            <!--Menu Navegable - Desktop-->
             <ul class="nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#bicicletas">bicicletas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">donde comprar</a>
+                    <a class="nav-link" href="./pages/donde_comprar.html">donde comprar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">contacto</a>
+                    <a class="nav-link" href="./pages/contacto.html">contacto</a>
                 </li>
             </ul>
-
             <!--Menu Navegable - mobile-->
-
             <div class="btn-group menu__mobile">
                 <button type="button" class="btn btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="oi oi-menu">
                     </span>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" id="dropdown-menu__overrides">
                     <li>
                         <a class="dropdown-item" href="#bicicletas">
                             Bicicletas
                         </a>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="./pages/donde_comprar.html">
                             Donde comprar
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="./pages/contacto.html">
                             Contacto
                         </a>
                     </li>
@@ -74,7 +72,6 @@
             </div>
         </nav>
     </header>
-
     <main>
         <!--Carrousel-->
         <div id="carouselWithControls" class="carousel slide" data-bs-ride="carousel">
@@ -101,99 +98,66 @@
                 120 años de trayectoria desembarcan en Argentina.
             </h2>
         </div>
-
-
         </section>
         <!--Bloque Bicicletas-->
-
         <section id="bicicletas">
             <div class="container" id="section__bicicletas">
                 <div class="row">
                     <div class="col-xs col-md-4 section__bicicletas">
                         <img src="./images/fuji_nevada.jpg" alt="fuji_nevada">
-
                         <a href="./pages/nevada.html">
                             descubrila
                         </a>
                     </div>
                     <div class="col-xs col-md-4 section__bicicletas">
-
                         <img src="./images/fuji_slm.jpg" alt="fuji_slm">
-
-                        <a href="./pages/bicicletas.html#slm">descubrila</a>
+                        <a href="./pages/slm.html">descubrila</a>
                     </div>
                     <div class="col-xs col-md-4 section__bicicletas">
-
                         <img src="./images/fuji_transonic.jpg" alt="fuji_transonic">
-
-                        <a href="./pages/bicicletas.html#transonic">descubrila</a>
+                        <a href="./pages/transonic.html">descubrila</a>
                     </div>
                 </div>
             </div>
-            <!--
-            <div id="section__bicicletas--nevada" class="section__bicicletas">
-
-                <img src="./images/fuji_nevada.jpg" alt="fuji_nevada">
-
-                <a href="./pages/bicicletas.html#nevada">
-                    descubrila
-                </a></div>
-
-            <div id="section__bicicletas--slm" class="section__bicicletas">
-
-                <img src="./images/fuji_slm.jpg" alt="fuji_slm">
-
-                <a href="./pages/bicicletas.html#slm">descubrila</a></div>
-
-            <div id="section__bicicletas--transonic" class="section__bicicletas">
-
-                <img src="./images/fuji_transonic.jpg" alt="fuji_transonic">
-
-                <a href="./pages/bicicletas.html#transonic">descubrila</a>
-            </div>
-            -->
         </section>
-
     </main>
-
     <footer>
-        <!--RRSS Footer
-        <p>Seguinos en @FujiBikesAr</p>
-        <ul>
-            <li class="rrss">
-                <a href="https://www.facebook.com/fujibikesar">
-                    <img src="./images/facebook.png" alt="facebook">
-                </a>
-            </li>
-            <li class="rrss">
-                <a href="https://www.instagram.com/fujibikesar/">
-                    <img src="./images/instagram.png" alt="instagram">
-                </a>
-            </li>
-            <li class="rrss">
-                <a href="https://www.youtube.com/channel/UCZvG3epI1XFAD7zqVtMU66w">
-                    <img src="./images/youtube.png" alt="youtube">
-                </a>
-            </li>
-        </ul>
-        <li class="footer__fujiLogo">
-            <img src="./images/fuji_logo.png" alt="fuji_logo">
-        </li>
-        <form>
-            <fieldset>
-                <legend>Suscribite a nuestro Newsletter</legend>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Email" required>
-                </div>
-            </fieldset>
-        </form>
-        <p class="footer__legales">Fuji Bikes Argentina 2022. Todos los derechos reservados</p>
-
+        <!--RRSS Footer-->
+        <div class="contenedor__rrssForm">
+            <div class="contenedor__rrss">
+                <p>Seguinos en @FujiBikesAr</p>
+                <ul>
+                    <li class="rrss">
+                        <a href="https://www.facebook.com/fujibikesar">
+                            <img src="./images/facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li class="rrss">
+                        <a href="https://www.instagram.com/fujibikesar/">
+                            <img src="./images/instagram.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="rrss">
+                        <a href="https://www.youtube.com/channel/UCZvG3epI1XFAD7zqVtMU66w">
+                            <img src="./images/youtube.png" alt="youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="home__form">
+                <fieldset>
+                    <legend>Suscribite a nuestro Newsletter</legend>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer__legales">
+            <p>Fuji Bikes Argentina 2022. Todos los derechos reservados. Desarrollado por JuanSa</p>
+        </div>
     </footer>
--->
-
-
 </body>
 
 </html>

@@ -35,50 +35,116 @@ nav {
     justify-content: space-around;
     align-items: center;
 
+    @media only screen and (max-width:768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav {
+            display: none;
+        }
+    }
+
     /*Barra negra para el menu fijo*/
     #fujiLogo img {
         width: 30%;
         filter: brightness(0) invert(1);
+
+        @media only screen and (max-width:768px) {
+            margin-left: 15px;
+        }
     }
-
-    /*Condiciones basicas Desktop*/
-    .menu__mobile {
-        display: none;
-    }
-
-    a {
-        text-transform: uppercase;
-
-    }
-
 }
 
+/*Condiciones basicas Desktop*/
+.menu__mobile {
+    display: none;
+
+    @media only screen and (max-width:768px) {
+        display: block;
+        z-index: 4;
+        right: 10px;
+
+        #fujiLogo {
+            left: 10px;
+        }
+    }
+
+    .dropdown-toggle {
+        display: flex;
+    }
+
+    .dropdown-menu.show {
+        width: max-content;
+        background-color: darkgray;
+    }
+
+    .oi-menu {
+        font-size: 30px;
+    }
+}
+
+a {
+    text-transform: uppercase;
+}
 
 /*Home - Seccion Historia*/
 .carousel {
     width: 100%;
     margin-bottom: 60px;
 
-    .carousel-item {
-        width: 100%;
-        height: 600px;
-        max-height: 600px;
-    }
+    @media only screen and (max-width:768px) {
+        margin-bottom: 10px;
+        padding-top: 95px;
 
-    /*Texto destacado de Home - seccion Historia*/
-    h2 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-weight: 900;
-        font-size: 5em;
-        text-align: center;
-        z-index: 1;
-        width: 70%;
-        text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
+        .carousel-one {
+            background-image: url("../images/fuji_history.jpg");
+        }
+
+        .carousel-two {
+            background-image: url("../images/fuji_history_1.jpg");
+        }
+
+        .carousel-three {
+            background-image: url("../images/fuji_history_2.jpg");
+        }
     }
 }
+
+.carousel-item {
+    width: 100%;
+    height: 600px;
+    max-height: 600px;
+
+    @media only screen and (max-width:768px) {
+        background-size: cover;
+        background-position: center;
+        max-height: 300px;
+
+        img {
+            visibility: hidden;
+        }
+    }
+}
+
+/*Texto destacado de Home - seccion Historia*/
+h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 5em;
+    text-align: center;
+    z-index: 1;
+    width: 70%;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
+
+    @media only screen and (max-width:768px) {
+        font-size: 20px;
+    }
+}
+
 
 /*section bicicletas*/
 .section__bicicletas {
@@ -87,6 +153,10 @@ nav {
 
     img {
         width: 100%;
+
+        @media only screen and (max-width:768px) {
+            margin-top: 15px;
+        }
     }
 
     /*Botones*/
@@ -103,11 +173,335 @@ nav {
         margin: 4px 15px 100px;
         cursor: pointer;
 
-
         /*Animacion botones*/
         &:hover {
             box-shadow: $sombraBotones;
         }
     }
+}
 
+footer {
+    margin-top: 60px;
+    background-color: rgb(199, 199, 199);
+    width: 100%;
+
+    @media only screen and (max-width:768px) {
+        margin-top: 10px;
+    }
+
+    p,
+    legend,
+    label {
+        color: black
+    }
+
+    .home__form {
+        @media only screen and (max-width:768px) {
+            display: none;
+        }
+    }
+
+    .contenedor__rrssForm {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 60px;
+
+        @media only screen and (max-width:768px) {
+            margin-top: 30px;
+        }
+    }
+
+    .contenedor__rrss {
+        display: flex;
+        flex-direction: column;
+
+        .rrss {
+            display: inline;
+        }
+
+        .rrss img {
+            width: 32px;
+            height: 32px;
+
+            @media only screen and (max-width:768px) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    .footer__legales {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+
+        @media only screen and (max-width:768px) {
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+        }
+
+    }
+}
+
+/*Pagina Contacto*/
+.main__form-Contacto {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width:768px) {
+        padding-top: 120px;
+        padding-bottom: 49px;
+    }
+
+    /*Ajuste del ancho del form*/
+    .form__fieldset {
+        width: 60%;
+    }
+
+    /*para que el input sea del 100% de la caja*/
+    input {
+        width: 100%;
+    }
+
+    legend {
+        font-size: 2em;
+        padding-bottom: 30px;
+
+        @media only screen and (max-width:768px) {
+            text-align: center;
+        }
+    }
+
+    input[type=text],
+    input[type=email] {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        color: black;
+    }
+
+    input[name=message] {
+        padding-bottom: 100px;
+    }
+
+    /*Botonera form*/
+    .form__botones--padre {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .form__botones {
+        width: 30%;
+    }
+
+    .form__botones,
+    legend,
+    label {
+        color: black;
+    }
+
+    input[type=submit],
+    input[type=reset] {
+        cursor: pointer;
+    }
+}
+
+/*Seccion Donde Comprar*/
+#bootstrap-overrides .mapa__botones-titulo {
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+
+    p {
+        color: black;
+        font-size: 25px;
+    }
+
+    @media only screen and (max-width:768px) {
+        margin-top: 200px;
+
+        p {
+            text-align: center;
+        }
+    }
+}
+
+#mapa__caba,
+#mapa__buenosAires,
+#mapa__cordoba {
+    position: relative;
+    top: -95px;
+}
+
+/*Botones*/
+#bootstrap-overrides .mapa__botones {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 5px;
+    padding-bottom: 400px;
+
+    @media only screen and (max-width:768px) {
+        flex-direction: column;
+
+    }
+
+    div {
+        background-color: rgb(222, 211, 182);
+        border-radius: 16px;
+        color: $colorTextoprincipal;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        margin: 4px 15px 100px;
+        cursor: pointer;
+
+        @media only screen and (max-width:768px) {
+            margin: 4px 15px 50px;
+        }
+
+        &:hover {
+            box-shadow: $sombraBotones;
+            color: $colorTextoprincipal;
+            transform: translateY(-7px);
+
+            .mapa__botones--provincias,
+            .contacto {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    p {
+        color: black;
+    }
+}
+
+/*fin botones*/
+/*mapas*/
+.mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.row {
+    display: hidden;
+}
+
+.googlemap__mobile {
+    display: none;
+
+    @media only screen and (max-width:768px) {
+        display: block;
+    }
+}
+
+.googlemap__desktop {
+    @media only screen and (max-width:768px) {
+        display: none;
+    }
+}
+
+.mapa__caba,
+.mapa__buenosAires,
+.mapa__cordoba {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-bottom: 150px;
+
+    @media only screen and (max-width:768px) {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+.mapa__textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    p,
+    .contacto {
+        color: black;
+    }
+
+    .mapa__titulo {
+        font-size: 18px;
+    }
+
+    .contacto {
+        font-size: 15px;
+    }
+}
+
+/*Seccion Bicicletas */
+/*Portada Seccion Bicicletas*/
+.portada__img {
+    width: 100%;
+    padding-top: 95px;
+    margin-bottom: 60px;
+}
+
+#section__principal {
+    position: relative;
+    text-align: center;
+
+    p {
+        color: $colorTextoprincipal;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+        width: 70%;
+    }
+}
+
+.portada__titulo {
+    font-size: 2em;
+
+    @media only screen and (max-width:768px) {
+        padding-top: 50px;
+    }
+}
+
+.portada__cuerpo {
+    padding-top: 160px;
+    font-size: 1.2em;
+
+    @media only screen and (max-width:768px) {
+        display: none;
+    }
+}
+
+/* FIN Portada Seccion Bicicletas*/
+
+/*Grid para el Main (portada + items del cuerpo)*/
+.row__bicicletas {
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-evenly;
+    padding-right: 30px;
+    text-align: center;
+
+
+    p {
+        color: black;
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width:768px) {
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
 }
