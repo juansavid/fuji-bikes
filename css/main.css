@@ -224,7 +224,8 @@ footer {
 #bootstrap-overrides .mapa__botones-titulo {
   margin-top: 300px;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  color: black; }
   #bootstrap-overrides .mapa__botones-titulo p {
     color: black;
     font-size: 25px; }
@@ -252,7 +253,7 @@ footer {
     #bootstrap-overrides .mapa__botones {
       flex-direction: column; } }
   #bootstrap-overrides .mapa__botones div {
-    background-color: #ded3b6;
+    background-color: black;
     border-radius: 16px;
     color: whitesmoke;
     padding: 15px 32px;
@@ -310,7 +311,12 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  max-width: 260px;
+  padding-right: 60px; }
+  @media only screen and (max-width: 768px) {
+    .mapa__textos {
+      padding-right: 0px; } }
   .mapa__textos p,
   .mapa__textos .contacto {
     color: black; }
