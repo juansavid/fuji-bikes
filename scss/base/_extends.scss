@@ -1,10 +1,4 @@
-%display-flex-column {
-    display: flex;
-    flex-direction: column;
-}
+%accion__botones-hover {
+    box-shadow: $sombraBotones;
 
-
-%display-flex-row {
-    display: flex;
-    flex-direction: row;
 }

@@ -114,8 +114,14 @@ a {
 
 .carousel-item {
     width: 100%;
-    height: 600px;
-    max-height: 600px;
+    height: 500px;
+    max-height: 500px;
+    background-size: cover;
+
+    @media only screen and (max-width: 1000px) and (min-width: 400px) {
+        height: 300px;
+        max-height: 300px;
+    }
 
     @media only screen and (max-width:768px) {
         background-size: cover;
@@ -135,6 +141,7 @@ h2 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 900;
+    font-size: 30px;
     font-size: 5em;
     text-align: center;
     z-index: 1;
@@ -142,7 +149,7 @@ h2 {
     text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px;
 
     @media only screen and (max-width:768px) {
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
@@ -176,7 +183,7 @@ h2 {
 
         /*Animacion botones*/
         &:hover {
-            box-shadow: $sombraBotones;
+            @extend %accion__botones-hover;
         }
     }
 }
@@ -193,7 +200,7 @@ footer {
     p,
     legend,
     label {
-        color: black
+        color: $colorTextosecundario
     }
 
     .home__form {
@@ -280,7 +287,7 @@ footer {
     input[type=email] {
         margin-bottom: 15px;
         padding-bottom: 15px;
-        color: black;
+        color: $colorTextosecundario;
     }
 
     input[name=message] {
@@ -297,12 +304,16 @@ footer {
 
     .form__botones {
         width: 30%;
+
+        &:hover {
+            @extend %accion__botones-hover;
+        }
     }
 
     .form__botones,
     legend,
     label {
-        color: black;
+        color: $colorTextosecundario;
     }
 
     input[type=submit],
@@ -316,10 +327,10 @@ footer {
     margin-top: 300px;
     display: flex;
     justify-content: center;
-    color: black;
+    color: $colorTextosecundario;
 
     p {
-        color: black;
+        color: $colorTextosecundario;
         font-size: 25px;
     }
 
@@ -368,9 +379,7 @@ footer {
         }
 
         &:hover {
-            box-shadow: $sombraBotones;
-            color: $colorTextoprincipal;
-            transform: translateY(-7px);
+            @include hover__animado(translateY(-7px));
 
             .mapa__botones--provincias,
             .contacto {
@@ -380,7 +389,7 @@ footer {
     }
 
     p {
-        color: black;
+        color: $colorTextosecundario;
     }
 }
 
@@ -439,7 +448,7 @@ footer {
 
     p,
     .contacto {
-        color: black;
+        color: $colorTextosecundario;
     }
 
     .mapa__titulo {
@@ -451,8 +460,7 @@ footer {
     }
 }
 
-/*Seccion Bicicletas */
-/*Portada Seccion Bicicletas*/
+/*Portada Seccion Bicicletas -- Nevada*/
 .portada__img {
     width: 100%;
     padding-top: 95px;
@@ -462,24 +470,30 @@ footer {
 #section__principal {
     position: relative;
     text-align: center;
+}
 
-    p {
-        color: $colorTextoprincipal;
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        z-index: 1;
-        width: 70%;
-    }
+
+#section__principal p {
+    color: $colorTextoprincipal;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    width: 70%;
 }
 
 .portada__titulo {
     font-size: 2em;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     @media only screen and (max-width:768px) {
-        padding-top: 50px;
+        top: 60%;
+
     }
 }
 
@@ -492,24 +506,96 @@ footer {
     }
 }
 
-/* FIN Portada Seccion Bicicletas*/
 
-/*Grid para el Main (portada + items del cuerpo)*/
-.row__bicicletas {
-    display: flex;
-    flex-flow: nowrap row;
-    justify-content: space-evenly;
-    padding-right: 30px;
-    text-align: center;
+/* FIN Portada Seccion Bicicletas -- Nevada*/
 
-
-    p {
-        color: black;
-        font-size: 20px;
-    }
+/*Grid para el Main (portada + items del cuerpo - Nevada & Transonic)*/
+#grilla {
+    display: grid;
+    grid-template-areas:
+        "portada portada portada"
+        "bicicleta__brickred bicicleta__cyan bicicleta__satin";
 
     @media only screen and (max-width:768px) {
-        flex-direction: column;
-        padding-bottom: 50px;
+        grid-template-areas:
+            "portada"
+            "bicicleta__brickred"
+            "bicicleta__cyan""bicicleta__satin";
+
+    }
+
+    grid-template-columns: repeat(auto-fill);
+}
+
+
+div#section__principal {
+    grid-area: portada;
+}
+
+section.col__productos__uno {
+    grid-area: bicicleta__brickred;
+}
+
+section.col__productos__dos {
+    grid-area: bicicleta__cyan;
+}
+
+section.col__productos__tres {
+    grid-area: bicicleta__satin;
+}
+
+.bicicleta {
+    justify-self: center;
+    margin-bottom: 150px;
+    margin-top: 30px;
+
+    p {
+        color: $colorTextosecundario;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 800;
+    }
+}
+
+
+/*Grid para el Main (portada + items del cuerpo - SLM)*/
+#grilla__slm {
+    display: grid;
+    grid-template-areas:
+        "portada portada"
+        "bicicleta__brickred bicicleta__cyan";
+
+    @media only screen and (max-width:768px) {
+        grid-template-areas:
+            "portada"
+            "bicicleta__armygreen"
+            "bicicleta__coolgray";
+    }
+}
+
+
+div#section__principal {
+    grid-area: portada;
+}
+
+section.col__productos__uno {
+    grid-area: bicicleta__armygreen;
+}
+
+section.col__productos__dos {
+    grid-area: bicicleta__coolgray;
+}
+
+
+.bicicleta {
+    justify-self: center;
+    margin-bottom: 150px;
+    margin-top: 30px;
+
+    p {
+        color: $colorTextosecundario;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 800;
     }
 }

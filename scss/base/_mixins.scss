@@ -1,0 +1,5 @@
+@mixin hover__animado($transformacion) {
+    @extend %accion__botones-hover;
+    color: $colorTextoprincipal;
+    transform: $transformacion
+}

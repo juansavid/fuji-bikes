@@ -1,3 +1,6 @@
+.section__bicicletas a:hover, .main__form-Contacto .form__botones:hover, #bootstrap-overrides .mapa__botones div:hover {
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4); }
+
 * {
   margin: 0;
   padding: 0;
@@ -80,8 +83,13 @@ a {
 
 .carousel-item {
   width: 100%;
-  height: 600px;
-  max-height: 600px; }
+  height: 500px;
+  max-height: 500px;
+  background-size: cover; }
+  @media only screen and (max-width: 1000px) and (min-width: 400px) {
+    .carousel-item {
+      height: 300px;
+      max-height: 300px; } }
   @media only screen and (max-width: 768px) {
     .carousel-item {
       background-size: cover;
@@ -97,6 +105,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 900;
+  font-size: 30px;
   font-size: 5em;
   text-align: center;
   z-index: 1;
@@ -104,7 +113,7 @@ h2 {
   text-shadow: rgba(0, 0, 0, 0.5) 0px 4px 5px; }
   @media only screen and (max-width: 768px) {
     h2 {
-      font-size: 20px; } }
+      font-size: 25px; } }
 
 /*section bicicletas*/
 .section__bicicletas {
@@ -129,8 +138,6 @@ h2 {
     margin: 4px 15px 100px;
     cursor: pointer;
     /*Animacion botones*/ }
-    .section__bicicletas a:hover {
-      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4); }
 
 footer {
   margin-top: 60px;
@@ -265,7 +272,6 @@ footer {
       #bootstrap-overrides .mapa__botones div {
         margin: 4px 15px 50px; } }
     #bootstrap-overrides .mapa__botones div:hover {
-      box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
       color: whitesmoke;
       transform: translateY(-7px); }
       #bootstrap-overrides .mapa__botones div:hover .mapa__botones--provincias,
@@ -325,8 +331,7 @@ footer {
   .mapa__textos .contacto {
     font-size: 15px; }
 
-/*Seccion Bicicletas */
-/*Portada Seccion Bicicletas*/
+/*Portada Seccion Bicicletas -- Nevada*/
 .portada__img {
   width: 100%;
   padding-top: 95px;
@@ -335,21 +340,26 @@ footer {
 #section__principal {
   position: relative;
   text-align: center; }
-  #section__principal p {
-    color: whitesmoke;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    width: 70%; }
+
+#section__principal p {
+  color: whitesmoke;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  width: 70%; }
 
 .portada__titulo {
-  font-size: 2em; }
+  font-size: 2em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
   @media only screen and (max-width: 768px) {
     .portada__titulo {
-      padding-top: 50px; } }
+      top: 60%; } }
 
 .portada__cuerpo {
   padding-top: 160px;
@@ -358,18 +368,61 @@ footer {
     .portada__cuerpo {
       display: none; } }
 
-/* FIN Portada Seccion Bicicletas*/
-/*Grid para el Main (portada + items del cuerpo)*/
-.row__bicicletas {
-  display: flex;
-  flex-flow: nowrap row;
-  justify-content: space-evenly;
-  padding-right: 30px;
-  text-align: center; }
-  .row__bicicletas p {
-    color: black;
-    font-size: 20px; }
+/* FIN Portada Seccion Bicicletas -- Nevada*/
+/*Grid para el Main (portada + items del cuerpo - Nevada & Transonic)*/
+#grilla {
+  display: grid;
+  grid-template-areas: "portada portada portada" "bicicleta__brickred bicicleta__cyan bicicleta__satin";
+  grid-template-columns: repeat(auto-fill); }
   @media only screen and (max-width: 768px) {
-    .row__bicicletas {
-      flex-direction: column;
-      padding-bottom: 50px; } }
+    #grilla {
+      grid-template-areas: "portada" "bicicleta__brickred" "bicicleta__cyan" "bicicleta__satin"; } }
+
+div#section__principal {
+  grid-area: portada; }
+
+section.col__productos__uno {
+  grid-area: bicicleta__brickred; }
+
+section.col__productos__dos {
+  grid-area: bicicleta__cyan; }
+
+section.col__productos__tres {
+  grid-area: bicicleta__satin; }
+
+.bicicleta {
+  justify-self: center;
+  margin-bottom: 150px;
+  margin-top: 30px; }
+  .bicicleta p {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800; }
+
+/*Grid para el Main (portada + items del cuerpo - SLM)*/
+#grilla__slm {
+  display: grid;
+  grid-template-areas: "portada portada" "bicicleta__brickred bicicleta__cyan"; }
+  @media only screen and (max-width: 768px) {
+    #grilla__slm {
+      grid-template-areas: "portada" "bicicleta__armygreen" "bicicleta__coolgray"; } }
+
+div#section__principal {
+  grid-area: portada; }
+
+section.col__productos__uno {
+  grid-area: bicicleta__armygreen; }
+
+section.col__productos__dos {
+  grid-area: bicicleta__coolgray; }
+
+.bicicleta {
+  justify-self: center;
+  margin-bottom: 150px;
+  margin-top: 30px; }
+  .bicicleta p {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800; }
